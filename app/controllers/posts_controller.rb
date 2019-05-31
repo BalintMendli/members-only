@@ -1,4 +1,4 @@
-class PostsControllerController < ApplicationController
+class PostsController < ApplicationController
   def new
   end
 
