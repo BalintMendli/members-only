@@ -1,15 +1,14 @@
 class SessionsController < ApplicationController
   def new
+    redirect_to posts_path if current_user
   end
 
   def create
     user = User.find_by(email: params[:session][:email])
     if user && user.authenticate(params[:session][:password])
-      def log_in(user)
-        update_attribute(:remember_digest, User.set_remember_digest)
+        user.update_attribute(:remember_digest, User.digest(User.new_token))
         log_in user
-        redirect_to user
-      end
+        redirect_to posts_path
     else
       flash.now[:danger] = 'Invalid email/password'
       render 'new'

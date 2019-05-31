@@ -1,2 +1,2 @@
-module PostsControllerHelper
+module PostsHelper
 end
