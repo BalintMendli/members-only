@@ -11,7 +11,7 @@ class User < ApplicationRecord
     Digest::SHA1.hexdigest(token.to_s)
   end
 
-  def set_remember_digest
+  def self.set_remember_digest
     self.remember_digest = User.digest(User.new_token)
   end
 end
