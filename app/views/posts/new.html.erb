@@ -1,7 +1,9 @@
+<h2>New Post</h2>
+<%= render 'layouts/error_messages'%>
 <%= form_for @post do |f|%>
 <%= f.label :title, 'Title: ' %>
 <%= f.text_field :title %><br>
 <%= f.label :body, 'Body: ' %>
-<%= f.text_area :body %><br>
+<%= f.text_area :body, size:'22x10' %><br>
 <%= f.submit 'Submit Post' %>
 <%end %>
