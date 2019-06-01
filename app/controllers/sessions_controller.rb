@@ -17,5 +17,6 @@ class SessionsController < ApplicationController
 
   def delete
     sign_out
+    redirect_to posts_path
   end
 end
