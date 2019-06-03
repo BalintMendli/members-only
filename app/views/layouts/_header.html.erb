@@ -3,9 +3,8 @@
   <% if current_user %>
     <li><%= link_to 'New post', new_post_path %></li>
     <li><%= link_to 'Sign out', sign_out_path, method: :delete %></li>
-  <% elsif !current_page?('/sign_in') %>
+  <% else %>
     <li><%= link_to 'Sign up', new_user_path %></li>
     <li><%= link_to 'Sign in', sign_in_path %></li>
-  <% end %>
-  
+  <% end %> 
 </ul>
