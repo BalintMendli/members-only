@@ -44,6 +44,10 @@ form {
   background-color: #e98b7a;
 }
 
+.alert-success {
+  background-color: #88e988;
+}
+
 .field_with_errors {
   padding: 1px;
   background-color: #e98b7a;
@@ -63,4 +67,9 @@ form {
   h2 {
     margin: 0;
   }
+}
+
+.remember {
+  font-size: 0.85rem;
+  margin-bottom: 32px;
 }
