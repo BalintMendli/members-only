@@ -1,0 +1,8 @@
+<h1>Posts</h1>
+<% @posts.each do |p| %>
+<h3 class="title"><%= p.title %></h3>
+<% if current_user %>
+  <p class="author">by <%= p.user.name %> (<%= p.user.email %>)</p>
+<% end %>
+<p class="body"><%= p.body %></p>
+<% end %>
